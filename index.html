@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+  </head>
+  <body>
+    <h1 class="question" >How old are you already?</h1>
+
+    <form class="question" >
+      <fieldset name='number-code' data-number-code-form>
+        <legend>Number Code</legend>
+        <input type="number" min='0' max='9' name='number-code-0' data-number-code-input='0' required />
+        <input type="number" min='0' max='9' name='number-code-1' data-number-code-input='1' required />
+      </fieldset>
+    </form>
+
+    <div id="success" class="success-wrapper" >
+      <p>Really?</p>
+    </div>
+
+    <script src="./src/js/main.js" ></script>
+  </body>
+</html>
