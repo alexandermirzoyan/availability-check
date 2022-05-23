@@ -31,6 +31,7 @@ const handleInput = ({ target }) => {
   }
 
   if (numberCodeInputs[0].value === '2' && numberCodeInputs[1].value === '0') {
+    window.scrollTo(0, 0);
     document.getElementById('step-1').style.display = 'block';
     document.body.style.backgroundColor = 'white';
     const deletingElement = document.getElementsByClassName('question');
