@@ -96,16 +96,23 @@ input[type=number] {
 
 .step-2-wrapper {
     z-index: 200;
+    margin-bottom: 400px;
 }
+
+.step-3-wrapper {
+    z-index: 300;
+}
+
+.step-4-wrapper {
+    z-index: 400;
+}
+
 .step-2-wrapper > p,
 .step-2-wrapper > a,
 .step-2-wrapper > button {
     font-size: 3.1rem;
 }
 
-.step-3-wrapper {
-    z-index: 300;
-}
 
 .action-btn {
     width: 100%;

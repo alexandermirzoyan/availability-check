@@ -96,3 +96,11 @@ thanksButtons.forEach((thanksButton) => {
     document.getElementById('step-3').style.display = 'block';
   });
 });
+
+const thinkingButtons = Array(...document.getElementsByClassName('action-thinking'));
+thinkingButtons.forEach((thinkingButton) => {
+  thinkingButton.addEventListener('click', () => {
+    document.getElementById('step-3').style.display = 'none';
+    document.getElementById('step-4').style.display = 'block';
+  });
+});
