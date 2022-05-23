@@ -4,7 +4,7 @@ const numberCodeForm = document.querySelector('[data-number-code-form]');
 const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
 
 // Event callbacks
-const handleInput = ({target}) => {
+const handleInput = ({ target }) => {
   if (!target.value.length) { return target.value = null; }
 
   const inputLength = target.value.length;
@@ -31,14 +31,14 @@ const handleInput = ({target}) => {
   }
 
   if (numberCodeInputs[0].value === '2' && numberCodeInputs[1].value === '0') {
-    document.getElementById('success').style.display = 'block';
-    document.body.style.backgroundColor = '#DAF6F3';
+    document.getElementById('step-1').style.display = 'block';
+    document.body.style.backgroundColor = 'white';
     const deletingElement = document.getElementsByClassName('question');
     for (let i = 0; i < deletingElement.length; i++) {
       deletingElement[i].style.display = 'none';
     }
   }
-}
+};
 
 const handleKeyDown = e => {
   const {code, target} = e;
@@ -80,3 +80,19 @@ const handleKeyDown = e => {
 // Event listeners
 numberCodeForm.addEventListener('input', handleInput);
 numberCodeForm.addEventListener('keydown', handleKeyDown);
+
+const yesButtons = Array(...document.getElementsByClassName('action-yes'));
+yesButtons.forEach((yesButton) => {
+  yesButton.addEventListener('click', () => {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('step-2').style.display = 'block';
+  });
+});
+
+const thanksButtons = Array(...document.getElementsByClassName('action-thanks'));
+thanksButtons.forEach((thanksButton) => {
+  thanksButton.addEventListener('click', () => {
+    document.getElementById('step-2').style.display = 'none';
+    document.getElementById('step-3').style.display = 'block';
+  });
+});

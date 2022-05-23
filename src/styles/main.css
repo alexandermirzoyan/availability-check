@@ -78,11 +78,47 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.tip-label, .success-wrapper > p {
-    font-size: 2.5rem;
+.steps-wrapper {
+    display: none;
 }
 
-.success-wrapper {
-    display: none;
+.tip-label,
+.steps-wrapper > p,
+.steps-wrapper > a,
+.steps-wrapper > button {
+    font-size: 2.5rem;
+    color: #7c564b;
+}
+
+.step-1-wrapper {
+    z-index: 100;
+}
+
+.step-2-wrapper {
     z-index: 200;
+}
+.step-2-wrapper > p,
+.step-2-wrapper > a,
+.step-2-wrapper > button {
+    font-size: 3.1rem;
+}
+
+.step-3-wrapper {
+    z-index: 300;
+}
+
+.action-btn {
+    width: 100%;
+    border: 1px solid #7c564b;
+    background: rgba(210, 206, 198, .4);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.action-btn:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.text-center {
+    text-align: center;
 }
