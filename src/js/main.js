@@ -86,6 +86,7 @@ yesButtons.forEach((yesButton) => {
   yesButton.addEventListener('click', () => {
     document.getElementById('step-1').style.display = 'none';
     document.getElementById('step-2').style.display = 'block';
+    window.scrollTo(0, 0);
   });
 });
 
@@ -94,6 +95,7 @@ thanksButtons.forEach((thanksButton) => {
   thanksButton.addEventListener('click', () => {
     document.getElementById('step-2').style.display = 'none';
     document.getElementById('step-3').style.display = 'block';
+    window.scrollTo(0, 0);
   });
 });
 
@@ -102,5 +104,6 @@ thinkingButtons.forEach((thinkingButton) => {
   thinkingButton.addEventListener('click', () => {
     document.getElementById('step-3').style.display = 'none';
     document.getElementById('step-4').style.display = 'block';
+    window.scrollTo(0, 0);
   });
 });
